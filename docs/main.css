@@ -1,0 +1,22 @@
+h1 {
+  font-family: "Arial", sans-serif;
+  font-size: 50px;
+  color: white;
+  background-color: green;
+}
+p {
+  font-family: "Arial", sans-serif;
+  font-size: 30px;
+  color: white;
+  background-color: red;
+}
+div {
+  font-family: "Arial", sans-serif;
+  width: 38rem;
+  margin: 0 auto;
+  background-color: yellow;
+}
+li {
+  font-family: "Arial", sans-serif;
+  background-color: yellow;
+}
