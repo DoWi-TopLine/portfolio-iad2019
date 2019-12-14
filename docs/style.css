@@ -1,34 +1,97 @@
+
+@media only screen and (min-width: 600px) { /* oder rem/em */
+
+}
+
+.hero-image img {
+  width: 100%;
+}
+
 /* Add a black background color to the navigation */
-.navigation {
+.main-navigation {
   background-color: #333;
   overflow: hidden;
-  height: 50px;
+  height: flex;
+  width: auto;
 }
 
 /* Style the links inside the navigation bar */
-.navigation a {
-  float: left;
+.main-navigation a {
+  display: flex;
+  justify-content: space-between;
+  float: auto;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 1.0rem;
 }
 
 /* Change the color of links on hover */
-.navigation a:hover {
+.main-navigation a:hover {
   background-color: #ddd;
   color: black;
 }
 
 /* Add a color to the active/current link */
-.navigation a.active {
+.main-navigation a.active {
   background-color: #4CAF50;
   color: white;
 }
 
+/* variable navigation bar */
+@media screen and (max-width: 400px) {
+  .main-navigation a {
+    text-align: center;
+    float: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main-navigation a {
+    width: 100%;
+    height: auto;
+    position: sticky;
+  }
+  .main-navigation a {float: center;}
+  div.content {margin-left: 0;}
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+body { margin: 0; }
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 25s slidy infinite;
+}
+
 html {
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Open sans', sans-serif;
 
   line-height: 1.5;
   letter-spacing: 0.01em;
@@ -44,23 +107,39 @@ html {
 }
 
 h1 {
-  font-size: 2rem;
-  font-family: 'Open Sans', sans-serif, bold;
+  margin-top: 4rem;
+  font-size: 3rem;
+  line-height: 1.2em;
+  font-family: 'Abril Fatface', cursive;
+  color: #25262a;
 }
 
 h2 {
-  font-size: 1.414rem;
-  font-family: 'Open Sans', sans-serif, bold;
-}
-
-@media only screen and (min-width: 600px) { /* oder rem/em */
-
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-family: 'Open sans', sans-serif;
+  color: lightslategrey;
 }
 
 p {
   margin-top: 0;
   margin-bottom: 1rem;
 }
+
+.Liste {
+p.fontAwesome { position:relative; }
+
+p.start:before { content: "\f04b"; }
+
+p.fontAwesome:before {
+position: absolute;
+top: 0px;
+left: 0;
+font-family: FontAwesome;
+font-size: 1.2em;
+color: #000; }
+}
+
 
 .navigation {
   width: 60%;
@@ -74,10 +153,8 @@ p {
   margin: 0 auto;
 }
 
-
 .grid {
   width: 32rem;
-  background-color: yellow;
   margin: 0 auto;
 
   display: flex;
@@ -86,10 +163,24 @@ p {
 }
 
 .spalte {
-  background-color: red;
-
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 5.58333333%;
   max-width: 5.58333333%;
+}
+
+.footer {
+  position: bottom;
+  display: flex;
+  bottom:0;
+  background-color: #333;
+  width:100%;
+  display: flex;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  font-size: 0.8rem;
+  margin-top: 10rem;
+  color: white;
+  left:0;
+  right:0;
 }
