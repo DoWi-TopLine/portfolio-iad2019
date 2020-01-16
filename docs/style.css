@@ -43,13 +43,6 @@
   color: #794a64;
 }
 
-/* Tabelle */
-.table {
-  background-color: #f5f5f5;
-  width: 100%;
-
-}
-
 /* variable navigation bar */
 @media screen and (max-width: 400px) {
   .main-navigation a {
@@ -68,7 +61,7 @@
     float: center;
   }
   div.content {
-    margin-left: 0;
+    margin: auto;
   }
 }
 
@@ -104,6 +97,8 @@ div#slider figure {
   font-size: 0;
   animation: 20s slidy infinite;
 }
+
+
 
 html {
   font-family: 'Roboto', sans-serif;
@@ -164,19 +159,28 @@ p {
   color: #25262a;
 }
 
+.content {
+  width: 100%;
+  max-width: 32rem;
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
 .Liste {
   margin-top: 0rem;
-  margin-left: 1rem;
   margin-bottom: 1.5rem;
-
+  padding-left: 1rem;
+  list-style-type: square;
+  list-style-position: outside;
+  list-style-image: none;
 }
 
 .ListeNR {
   margin-top: 0rem;
-  margin-left: 0rem;
   margin-bottom: 1.5rem;
+  padding-left: 1rem;
 }
-
 
 .navigation {
   width: 60%;
@@ -184,11 +188,8 @@ p {
   margin: 0 auto;
 }
 
-.content {
-  width: 100%;
-  max-width: 32rem;
-  margin: 0 auto;
-}
+
+
 
 /* Grundgerüst*/
 .grid {
@@ -211,23 +212,20 @@ p {
 }
 
 /* Footer */
-.footer-background {
+.footer {
 background-color: #25262a;
-width: 100%;
-background-size: 100%;
-text-align: center;
+margin-top: 5rem;
+
 }
 
-.footer {
-  height:20px;
+.footer-content {
   color: white;
   margin: 0 auto;
-  margin-top: 5rem;
-  margin-left: middle;
-  padding: 1px 16px;
+  padding: 3rem;
   width: 80%;
-  max-width: 38rem;
+  max-width: 32rem;
 }
-.footer p {
+.footer-content p {
   margin-bottom: 0;
+  text-align: center;
 }
