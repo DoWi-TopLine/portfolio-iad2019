@@ -5,6 +5,7 @@
 
 .hero-image img {
   width: 100%;
+  margin: 0 auto;
 }
 
 /* Add a black background color to the navigation */
@@ -43,6 +44,10 @@
   color: #794a64;
 }
 
+.main-navigation a.selected {
+  background-color: white;
+}
+
 /* variable navigation bar */
 @media screen and (max-width: 400px) {
   .main-navigation a {
@@ -79,6 +84,54 @@ video {
   margin-bottom: 1rem;
 }
 
+html {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  hyphens: auto;
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 600px) { /* oder rem/em */
+  html {
+    font-size: 16px;
+  }
+}
+
+h1 {
+  margin-top: 4rem;
+  font-size: 3rem;
+  line-height: 1.2em;
+  font-family: 'Amatic SC', cursive;
+  color: #25262a;
+}
+
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-family: 'Amatic SC', cursive;
+  color: #794a64;
+}
+
+h3 {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  color: #25262a;
+}
+
+p {
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+}
+
+body {
+  background-color: white;
+}
+
+/* Hintergrundfarbe zum Unterteilen der Rubriken
 .style {
   background-color: #f2f2f2;
   padding-left: 100%;
@@ -87,20 +140,11 @@ video {
   padding-bottom: 3.5rem;
   margin-left: -100%;
   margin-right: -100%;
-  max-width: 32rem;
+  height: auto;
 }
+*/
 
-.stylewhite {
-  background-color: white;
-  padding-left: 100%;
-  padding-right: 100%;
-  padding-top: 1.5rem;
-  padding-bottom: 3.5rem;
-  margin-left: -100%;
-  margin-right: -100%;
-  max-width: 32rem;
-}
-
+/* Interaktiver Bildslide */
 .carousel {
     position: relative;
     margin-top: 26px;
@@ -243,48 +287,6 @@ div#slider figure {
 
 
 
-html {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.5;
-  letter-spacing: 0.01em;
-  hyphens: auto;
-  font-size: 14px;
-}
-
-@media only screen and (min-width: 600px) { /* oder rem/em */
-  html {
-    font-size: 16px;
-  }
-}
-
-h1 {
-  margin-top: 4rem;
-  font-size: 3rem;
-  line-height: 1.2em;
-  font-family: 'Amatic SC', cursive;
-  color: #25262a;
-}
-
-h2 {
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-  font-size: 2rem;
-  font-family: 'Amatic SC', cursive;
-  color: #794a64;
-}
-
-h3 {
-  margin-top: 0rem;
-  margin-bottom: 0rem;
-  font-size: 1rem;
-  font-family: 'Roboto', sans-serif;
-  color: #25262a;
-}
-
-p {
-  margin-top: 0rem;
-  margin-bottom: 1rem;
-}
 
 /* Hervorgehobene Textstellen, gross, zentriert */
 .outstanding {
@@ -345,7 +347,7 @@ p {
 }
 
 .button a:link {
-  color: pink;
+  color: white;
   background-color: transparent;
   text-decoration: none;
 }
@@ -398,13 +400,15 @@ p {
 .footer {
 background-color: #25262a;
 margin-top: 5rem;
-
 }
 
 .footer-content {
   color: white;
   margin: 0 auto;
-  padding: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   width: 80%;
   max-width: 32rem;
 }
