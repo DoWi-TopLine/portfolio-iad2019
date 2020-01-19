@@ -72,6 +72,150 @@ img {
   margin-bottom: 1rem;
 }
 
+video {
+  width: 100%;
+  height: auto;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.style {
+  background-color: #f2f2f2;
+  padding-left: 100%;
+  padding-right: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 3.5rem;
+  margin-left: -100%;
+  margin-right: -100%;
+  max-width: 32rem;
+}
+
+.stylewhite {
+  background-color: white;
+  padding-left: 100%;
+  padding-right: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 3.5rem;
+  margin-left: -100%;
+  margin-right: -100%;
+  max-width: 32rem;
+}
+
+.carousel {
+    position: relative;
+    margin-top: 26px;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 2%;
+}
+
+.carousel-control.next {
+    right: 2%;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #794a64;
+}
+
+#title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
 /* Automatischer Bildslide */
 @keyframes slidy {
 0% { left: 0%; }
@@ -85,7 +229,6 @@ img {
 100% { left: -400%; }
 }
 
-body { margin: 0; }
 div#slider { overflow: hidden; }
 div#slider figure img { width: 20%; float: left; }
 div#slider figure {
@@ -160,11 +303,11 @@ p {
 }
 
 .content {
-  width: 100%;
   max-width: 32rem;
+  min-width: 10rem;
   margin: 0 auto;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .Liste {
@@ -188,8 +331,51 @@ p {
   margin: 0 auto;
 }
 
+/* Links extern*/
+.button {
+  background-color: #794a64; /* violett */
+  border: none;
+  color: white;
+  padding: 0.5rem 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+}
 
+.button a:link {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
 
+.button a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.button a:hover {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.button a:active {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/* Video*/
+.button.play {
+  width: 74px;
+  height: 74px;
+  border-style: solid;
+  border-width: 37px;
+  border-color: #202020;
+}
 
 /* Grundgerüst*/
 .grid {
@@ -201,14 +387,11 @@ p {
   justify-content: space-between;
 }
 
-
 .spalte {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 5.58333333%;
   max-width: 5.58333333%;
-  margin-left: 3rem;
-  margin-right: 3rem;
 }
 
 /* Footer */
@@ -225,6 +408,7 @@ margin-top: 5rem;
   width: 80%;
   max-width: 32rem;
 }
+
 .footer-content p {
   margin-bottom: 0;
   text-align: center;
