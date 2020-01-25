@@ -70,7 +70,24 @@
   }
 }
 
+#myBtn {
+  position: fixed; /* Fixed/sticky position */
+  display: block; /* Hidden by default */
+  bottom: 3rem; /* Place the button at the bottom of the page */
+  right: 2rem; /* Place the button 30px from the right */
+  cursor: pointer; /* Add a mouse pointer on hover */
 
+  height: 3rem;
+  width: 3rem;
+  z-index: 7;
+}
+
+#myBtn img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
 
 img {
   width: 100%;
